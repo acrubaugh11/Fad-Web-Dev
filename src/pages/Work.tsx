@@ -1,4 +1,4 @@
-import geasart from '../assets/cover.png'
+import geasart from '../assets/geacover.png'
 import carguys from '../assets/carguys.png'
 import zeez from '../assets/zeez.png'
 import ac from '../assets/ac.png'
