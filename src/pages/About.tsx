@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import logo from '../assets/logu.png';
+import logo from '../assets/logu.jpg';
 import hand from '../assets/hand.jpg';
 import flouer from '../assets/flouer.jpg';
 import { useState } from "react";

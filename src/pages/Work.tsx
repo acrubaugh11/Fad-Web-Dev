@@ -1,7 +1,7 @@
-import geasart from '../assets/geacover.png'
-import carguys from '../assets/carguys.png'
-import zeez from '../assets/zeez.png'
-import ac from '../assets/ac.png'
+import geasart from '../assets/geacover.jpg'
+import carguys from '../assets/carguys.jpg'
+import zeez from '../assets/zeez.jpg'
+import ac from '../assets/ac.jpg'
 import Navbar from '../components/Navbar'
 
 const websites = [

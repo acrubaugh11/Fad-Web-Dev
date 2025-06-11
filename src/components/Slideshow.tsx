@@ -1,4 +1,4 @@
-import slide1 from '../assets/pt2.png';
+import slide1 from '../assets/pt2.jpg';
 import slide3 from '../assets/hand.jpg';
 import slide2 from '../assets/flouer.jpg';
 import { useEffect, useState } from 'react';

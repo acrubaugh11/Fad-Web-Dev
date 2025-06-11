@@ -1,4 +1,4 @@
-import logo from '../assets/logu.png'
+import logo from '../assets/logu.jpg'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
