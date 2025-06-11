@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 function About() {
       const images = [logo, logo];
-        const [currentIndex, setCurrentIndex] = useState(0);
+      const [currentIndex] = useState(0);
     return(
         
         <>
