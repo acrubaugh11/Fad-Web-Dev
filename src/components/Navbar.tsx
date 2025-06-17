@@ -19,7 +19,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowNavbar(window.scrollY <= 300)
+      setShowNavbar(window.scrollY <= 100)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -27,10 +27,11 @@ export default function Navbar() {
   }, [])
 
   return (
+    <>
     <Disclosure
       as="nav"
       className={classNames(
-        "fixed overflow-x-hidden w-full top-5 z-50 bg-black transition-transform duration-500",
+        "fixed overflow-x-hidden hidden md:block w-full pt-5 z-50 bg-black transition-transform duration-500",
         showNavbar ? "translate-y-0" : "-translate-y-full"
       )}
     >
@@ -55,9 +56,9 @@ export default function Navbar() {
 
 
 
-            <div className='text-center w-min mx-auto cinzel-font text-[50%]'>
+            <div className='text-center !flex w-max mx-auto cinzel-font text-[50%]'>
                 <h1 className="">
-                    Fad Web And Development
+                    A3 Web Studios
                 </h1>
             </div>
             
@@ -69,5 +70,46 @@ export default function Navbar() {
         </div>
 
     </Disclosure>
+
+
+{/* Mobile Navbar */}
+<div className="w-screen !overflow-x-hidden md:hidden">
+  <Disclosure as="nav" className="fixed top-0 left-0 pt-5 z-50 bg-black">
+    {({ open }) => (
+      <>
+        <div className="grid grid-cols-1 text-center px-5">
+          <div className="cinzel-font text-sm">
+            <h1 className=''>A3 Web Studios</h1>
+          </div>
+
+          <Disclosure.Button className="text-black !bg-white mx-auto  rounded-md focus:outline-none focus:ring-2 focus:ring-white">
+            {open ? 'Close' : 'Menu'}
+          </Disclosure.Button>
+        </div>
+
+        <Disclosure.Panel className="bg-black text-center space-y-2 py-2">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              to={item.to}
+              className="block text-white px-3 py-2 rounded-md text-sm"
+            >
+              {item.name}
+            </Link>
+          ))}
+          <Link to="/quote">
+            <button className="mt-2 px-4 py-2 !bg-white text-black rounded-md border border-white hover:bg-black hover:text-white transition duration-300">
+              Request Quote
+            </button>
+          </Link>
+        </Disclosure.Panel>
+      </>
+    )}
+  </Disclosure>
+</div>
+
+
+
+    </>
   )
 }
