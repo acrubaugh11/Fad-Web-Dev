@@ -22,9 +22,7 @@ function About() {
 
     return(
         
-        <div className={`transition-opacity duration-500 ${
-        isVisible ? 'opacity-100' : 'opacity-0'
-      }`}>
+<>
             <Navbar>
             </Navbar>
 
@@ -79,7 +77,7 @@ function About() {
                 <Process></Process>
                 <div className="h-10"></div>
 
-        </div>
+        </>
     )
 }
 export default About
