@@ -19,7 +19,7 @@ function About() {
 
     return(
         
-<>
+<div className="overflow-x-hidden">
   <Navbar />
 
   {/* Hero section */}
@@ -93,7 +93,7 @@ function About() {
   <Process />
 
   <div className="h-10" />
-</>
+</div>
 
     )
 }
