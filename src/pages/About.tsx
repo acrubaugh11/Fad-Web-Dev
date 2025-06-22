@@ -1,5 +1,4 @@
 import Navbar from "../components/Navbar";
-import logo from '../assets/logu.jpg';
 import hand from '../assets/hand.jpg';
 import flouer from '../assets/flouer.jpg';
 import { useEffect, useState } from "react";
@@ -7,9 +6,7 @@ import Process from "../components/Process";
 import { Link } from "react-router-dom";
 
 function About() {
-      const images = [logo, logo];
-      const [currentIndex] = useState(0);
-        const [isVisible, setIsVisible] = useState(false);
+        const [, setIsVisible] = useState(false);
 
         useEffect(() => {
             // Trigger after mount

@@ -1,6 +1,4 @@
-import slide1 from '../assets/pt2.jpg';
 import slide2 from '../assets/flouer.jpg';
-import slide3 from '../assets/hand.jpg';
 import slide5 from '../assets/f.jpg';
 import slide6 from '../assets/11.jpg';
 import { useEffect, useState, type SetStateAction } from 'react';
@@ -8,7 +6,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 function Slideshow() {
   const images = [slide2, slide2, slide2];
-    const placeholder = [slide1, slide3];
 
   const mobileImages = [
     { src: slide2, position: 'object-center' },
