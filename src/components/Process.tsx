@@ -28,7 +28,7 @@ function Process() {
 
   return (
     <>
-      <h1 className="cinzel-font text-center mt-10 pb-20">Our process to production:</h1>
+      <h1 className="cinzel-font text-center mt-10 mx-5 pb-20">Our process to production:</h1>
       <div className="grid grid-cols-1 justify-items-center mx-auto">
         {steps.map((step, index) => (
           <div

@@ -2,21 +2,34 @@ import Navbar from "../components/Navbar";
 import logo from '../assets/logu.jpg';
 import hand from '../assets/hand.jpg';
 import flouer from '../assets/flouer.jpg';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Process from "../components/Process";
 import { Link } from "react-router-dom";
 
 function About() {
       const images = [logo, logo];
       const [currentIndex] = useState(0);
+        const [isVisible, setIsVisible] = useState(false);
+
+        useEffect(() => {
+            // Trigger after mount
+            const timeout = setTimeout(() => {
+            setIsVisible(true);
+            }, 10);  // small delay to ensure browser paints opacity-0 first
+
+            return () => clearTimeout(timeout);
+        }, []);
+
     return(
         
-        <>
+        <div className={`transition-opacity duration-500 ${
+        isVisible ? 'opacity-100' : 'opacity-0'
+      }`}>
             <Navbar>
             </Navbar>
 
             {/* <img src={logo} alt="" className='absolute top-[60vh] left-1/2 transform -translate-x-1/2'   data-aos="fade-up" data-aos-duration='1500'/> */}
-            <div className="max-w-2/3 mx-auto h-[75vh] mt-[30vh]">
+            <div className="max-w-2/3 mx-auto h-[75vh] mt-30 md:mt-[30vh]">
                 <h1 className="text-center !leading-20 cinzel-font text-shadow-lg">
                     <strong>fast</strong>, <strong>modern</strong> websites to empower your local businesses. 
                 </h1>
@@ -32,8 +45,8 @@ function About() {
 
                 <div className="border border-white mx-auto w-1/2 my-20"/>
 
-                <div className="grid justify-items-center grid-cols-2 cinzel-font h-[100vh] pt-40 px-10 ">
-                    <p className=" text-center leading-9 px-10 ">
+                <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 cinzel-font h-[100vh] pt-40 px-10 ">
+                    <p className="hidden md:block text-center leading-9 px-10 ">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Aliquam odit reiciendis saepe officia eaque numquam commodi
                         eligendi facere sint, vitae cumque suscipit alias voluptatibus
@@ -55,15 +68,18 @@ function About() {
                             </button>
                         </Link>
                     </p>
-                    <img src={flouer} alt="Decorative Flower" className="mx-auto h-1/2" />
+                    <img src={flouer} alt="Decorative Flower" className="mx-auto md:h-1/2" />
+                    <p className="md:hidden mt-10 text-center leading-9 px-10 ">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolores illum saepe. A accusamus, dolorem ex harum debitis eligendi natus ipsum vitae fugiat voluptatem nulla? Iusto odio a vitae beatae?
+                    </p>
                 </div>
 
                 <div className="border border-white mx-auto w-1/2 my-20"/>
-
+                <div className="h-10"></div>
                 <Process></Process>
                 <div className="h-10"></div>
-        </>
 
+        </div>
     )
 }
 export default About
