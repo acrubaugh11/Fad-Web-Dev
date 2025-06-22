@@ -20,61 +20,81 @@ function About() {
     return(
         
 <>
-            <Navbar>
-            </Navbar>
+  <Navbar />
 
-            {/* <img src={logo} alt="" className='absolute top-[60vh] left-1/2 transform -translate-x-1/2'   data-aos="fade-up" data-aos-duration='1500'/> */}
-            <div className="max-w-2/3 mx-auto h-[75vh] mt-30 md:mt-[30vh]">
-                <h1 className="text-center !leading-20 cinzel-font text-shadow-lg">
-                    <strong>fast</strong>, <strong>modern</strong> websites to empower your local businesses. 
-                </h1>
-            </div>
-            <img
-            src={hand}
-            alt=""
-            className="absolute !opacity-50 m-0 top-1/3 inset-0 left-[62vh] h-1/2 z-[-1]"
-            style={
-                {filter: 'blur(3px)',}
-            }
-            />      
+  {/* Hero section */}
+  <div className="max-w-[90%] mx-auto h-[75vh] mt-10 md:mt-[30vh] flex items-center">
+    <h1 className="text-center leading-snug text-xl md:text-3xl lg:text-4xl cinzel-font text-shadow-lg">
+      <strong>fast</strong>, <strong>modern</strong> websites to empower your local businesses.
+    </h1>
+  </div>
 
-                <div className="border border-white mx-auto w-1/2 my-20"/>
+  {/* Decorative blurred hand image */}
+  <img
+    src={hand}
+    alt=""
+    className="absolute opacity-50 inset-0 top-1/3 left-1/2 transform -translate-x-1/2 md:left-[62vh] md:h-1/2 z-[-1]"
+    style={{ filter: 'blur(3px)' }}
+  />
 
-                <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 cinzel-font h-[100vh] pt-40 px-10 ">
-                    <p className="hidden md:block text-center leading-9 px-10 ">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Aliquam odit reiciendis saepe officia eaque numquam commodi
-                        eligendi facere sint, vitae cumque suscipit alias voluptatibus
-                        earum consectetur maiores libero laboriosam natus?
-                        <br /><br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Aliquam odit reiciendis saepe officia eaque numquam commodi
-                        eligendi facere sint, vitae cumque suscipit alias voluptatibus
-                        earum consectetur maiores libero laboriosam natus?
-                        <br /><br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Aliquam odit reiciendis saepe officia eaque numquam commodi
-                        eligendi facere sint, vitae cumque suscipit alias voluptatibus
-                        earum consectetur maiores libero laboriosam natus?
-                        <br />
-                        <Link to={'/quote'}>
-                            <button className="mt-8 px-6 py-3 !bg-white text-black rounded-md !border !border-white hover:!bg-black hover:!text-white !transition !duration-300">
-                            Get Started With Us Now
-                            </button>
-                        </Link>
-                    </p>
-                    <img src={flouer} alt="Decorative Flower" className="mx-auto md:h-1/2" />
-                    <p className="md:hidden mt-10 text-center leading-9 px-10 ">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolores illum saepe. A accusamus, dolorem ex harum debitis eligendi natus ipsum vitae fugiat voluptatem nulla? Iusto odio a vitae beatae?
-                    </p>
-                </div>
+  <div className="border border-white mx-auto w-1/2 my-10 md:my-20" />
 
-                <div className="border border-white mx-auto w-1/2 my-20"/>
-                <div className="h-10"></div>
-                <Process></Process>
-                <div className="h-10"></div>
+  {/* Content grid */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 cinzel-font px-6 md:px-10 py-10">
+    
+    {/* Text block for desktop */}
+    <div className="hidden md:flex flex-col justify-center text-center leading-7 md:leading-9">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Aliquam odit reiciendis saepe officia eaque numquam commodi
+        eligendi facere sint, vitae cumque suscipit alias voluptatibus
+        earum consectetur maiores libero laboriosam natus?
+      </p>
+      <p className="mt-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Aliquam odit reiciendis saepe officia eaque numquam commodi
+        eligendi facere sint, vitae cumque suscipit alias voluptatibus
+        earum consectetur maiores libero laboriosam natus?
+      </p>
+      <p className="mt-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Aliquam odit reiciendis saepe officia eaque numquam commodi
+        eligendi facere sint, vitae cumque suscipit alias voluptatibus
+        earum consectetur maiores libero laboriosam natus?
+      </p>
+      <Link to="/quote">
+        <button className="mt-8 px-6 py-3 bg-white text-black rounded-md border border-white hover:bg-black hover:text-white transition duration-300">
+          Get Started With Us Now
+        </button>
+      </Link>
+    </div>
 
-        </>
+    {/* Flower image */}
+    <img src={flouer} alt="Decorative Flower" className="mx-auto w-full max-w-xs md:max-w-sm lg:max-w-md" />
+
+    {/* Mobile text block */}
+    <div className="md:hidden text-center leading-7 mt-6">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolores illum saepe. A accusamus, dolorem ex harum debitis eligendi natus ipsum vitae fugiat voluptatem nulla? Iusto odio a vitae beatae?
+      </p>
+      <Link to="/quote">
+        <button className="mt-6 px-6 py-3 bg-white text-black rounded-md border border-white hover:bg-black hover:text-white transition duration-300">
+          Get Started With Us Now
+        </button>
+      </Link>
+    </div>
+
+  </div>
+
+  <div className="border border-white mx-auto w-1/2 my-10 md:my-20" />
+
+  <div className="h-10" />
+
+  <Process />
+
+  <div className="h-10" />
+</>
+
     )
 }
 export default About

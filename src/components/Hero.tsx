@@ -19,7 +19,7 @@ function Hero() {
             <img
             src={logo}
             alt=""
-            className="absolute top-[40vh] left-1/2 transform -translate-x-1/2 scale-50 z-0 hidden md:block"
+            className="absolute top-[40vh] left-1/2 transform -translate-x-1/2 scale-50 z-0 hidden md:block !opacity-20"
             data-aos="fade-up"
             data-aos-duration="1500"
             />
@@ -27,10 +27,11 @@ function Hero() {
             <img
             src={logo}
             alt=""
-            className="absolute top-[40vh] left-1/2 transform -translate-x-1/2 scale-50 z-0 md:hidden !opacity-20"
+            className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-50 z-10 md:hidden !opacity-20"
             data-aos="fade-up"
             data-aos-duration="1500"
             />
+
 
             <div className="relative max-w-2/3 mx-auto h-[75vh] mt-[30vh] z-10 hidden md:block">
             <h1 className="text-center !leading-20 cinzel-font">

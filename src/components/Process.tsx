@@ -17,7 +17,7 @@ function Process() {
       description: "We gather assets, set up hosting, and create a project roadmap.",
     },
     {
-      title: "Design/Development Phase",
+      title: "Design/Dev Phase",
       description: "Your website comes to life through design, coding, and content integration and much hard work.",
     },
   ];

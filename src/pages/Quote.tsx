@@ -4,8 +4,15 @@ import flower from '../assets/flouer.jpg';
 export default function Example() {
   return (
     <>
-    <img src={flower} alt="" className="absolute opacity-10 pointer-events-none overflow-x-hidden h-full w-full object-cover overflow-y-hidden"/>
-    <div className="min-h-screen w-screen bg-black text-white flex items-center justify-center px-4">
+  <div
+    className="fixed inset-0 pointer-events-none opacity-10 z-100"
+    style={{
+      backgroundImage: `url(${flower})`,
+      backgroundRepeat: 'repeat',
+      backgroundSize: 'cover',
+    }}
+  />
+    <div className="relative min-h-screen w-screen bg-transparent text-white flex items-center justify-center px-4 z-10">
       <form className="w-full max-w-xl bg-neutral-900 p-8 rounded-2xl shadow-xl space-y-6 border border-white">
         {/* Heading */}
         <h2 className="text-3xl font-bold text-center mb-4">Request a Quote</h2>
@@ -91,12 +98,12 @@ export default function Example() {
         <div className="text-center">
           <button
             type="submit"
-            className="text-black bg-white mx-5 font-semibold px-6 py-3 rounded-md hover:bg-yellow-300 transition duration-200"
+            className="text-black my-2 bg-white mx-5 font-semibold px-6 py-3 rounded-md hover:bg-yellow-300 transition duration-200"
           >
             Request Quote
           </button>
           <Link to={'/'}>
-            <button className="text-black bg-white mx-5 font-semibold px-6 py-3 rounded-md hover:bg-yellow-300 transition duration-200">
+            <button className="text-black my-2 bg-white mx-5 font-semibold px-6 py-3 rounded-md hover:bg-yellow-300 transition duration-200">
               Back
             </button>
           </Link>
