@@ -24,7 +24,7 @@ function Work() {
             <img
             src={website.imageUrl}
             alt={website.title}
-            className="h-[50vh] w-full md:w-full object-contain bg-gray-300 md:!object-fill transition-transform duration-300 group-hover:scale-105"
+            className="h-full w-full md:w-full object-contain bg-black border border-gray-900 md:!object-fill transition-transform duration-300 group-hover:scale-105"
             />
 
             {/* Title overlay */}
