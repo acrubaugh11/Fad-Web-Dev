@@ -1,14 +1,14 @@
 import geasart from '../assets/geacover.jpg'
 import carguys from '../assets/carguys.jpg'
 import zeez from '../assets/zeez.jpg'
-import ac from '../assets/ac.jpg'
+import ac from '../assets/ac.png'
 import Navbar from '../components/Navbar'
 
 const websites = [
   { id: 1, imageUrl: geasart, title: 'Geas Art', link: 'https://geasart.com' },
   { id: 2, imageUrl: carguys, title: 'Car Guys', link: '/' },
   { id: 3, imageUrl: zeez, title: 'ZeezCreations', link: 'https://zeezcreations.com/' },
-  { id: 4, imageUrl: ac, title: 'Alexander Crubaugh', link: 'https://acrubaugh11.github.io/alexcrubaugh.github.io/#header' },
+  { id: 4, imageUrl: ac, title: 'Alexander Crubaugh', link: 'https://personal-page-pj5d.vercel.app/' },
 ]
 
 function Work() {
