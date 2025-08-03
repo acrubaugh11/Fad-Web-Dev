@@ -19,7 +19,7 @@ export default function FeaturedWork() {
   }, [])
 
   return (
-    <div className="sm:py-10 cinzel-font">
+    <div className="sm:py-10 cinzel-font mt-0 md:mt-60">
       <div className="mx-auto max-w-8/10 px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl sm:text-3xl mb-10">Featured Work</h2>
